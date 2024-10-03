@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -20,7 +20,7 @@
         <button class="btn check">Check!</button>
       </section>
       <section class="right">
-        <p class="message">Start guessing...</p>
+        <p class="message">🔍 Start guessing...</p>
         <p class="label-score">💯 Score: <span class="score">20</span></p>
         <p class="label-highscore">
           🥇 Highscore: <span class="highscore">0</span>
@@ -29,4 +29,46 @@
     </main>
     <script src="script.js"></script>
   </body>
-</html>
+</html> -->
+
+
+<style>
+  #accesiblePackage,
+  #naturePackage,
+  #adventurePackage,
+  #cultralPackage,
+  #romancePackage,
+  #allInclusivePackage {
+    cursor: pointer;
+  }
+</style>
+<script>
+  // vars
+  const accesible = document.getElementById('accesiblePackage');
+  const nature = document.getElementById('naturePackage');
+  const adventure = document.getElementById('adventurePackage');
+  const cultural = document.getElementById('cultralPackage');
+  const romance = document.getElementById('romancePackage');
+  const allInclusive = document.getElementById('allInclusivePackage');
+
+
+  accesible.addEventListener('click', function () {
+    location.href = 'https://costaricatraveland.com/destinations/guanacaste/'
+  }, false);
+
+  nature.addEventListener('click', function () {
+    location.href = 'https://costaricatraveland.com/destinations/la-fortuna-and-arenal-volcano/'
+  }, false);
+
+  cultural.addEventListener('click', function () {
+    location.href = 'https://costaricatraveland.com/destinations/monteverde-cloud-forest/'
+  }, false);
+
+  romance.addEventListener('click', function () {
+    location.href = 'https://costaricatraveland.com/destinations/jaco-and-manuel-antonio/'
+  }, false);
+
+  allInclusive.addEventListener('click', function () {
+    location.href = 'https://costaricatraveland.com/destinations/puerto-viejo-and-the-caribbean/'
+  }, false);
+</script>

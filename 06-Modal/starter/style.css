@@ -83,3 +83,22 @@ p {
   backdrop-filter: blur(3px);
   z-index: 5;
 }
+
+.btn {
+  margin-top: 4rem;
+  padding: 15px;
+  background-color: #28b487;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: bolder;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-ok:hover {
+  background-color: #7dd56f;
+}
+.btn-close:hover {
+  background-color:crimson;
+}
