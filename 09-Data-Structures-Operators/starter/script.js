@@ -37,10 +37,10 @@ const restaurant = {
   },
 
   orderDelivery({ time, address, mainIndex, startIndex }) {
-    // console.log(`
-    //   Order received! ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]}
-    //   will be delivered to ${address} at ${time}.
-    // `);
+    console.log(`
+      Order received! ${this.starterMenu[startIndex]} and ${this.mainMenu[mainIndex]}
+      will be delivered to ${address} at ${time}.
+    `);
   },
 
   orderPasta(ing1, ing2, ing3) {
@@ -169,9 +169,9 @@ const restaurant = {
 // console.log(newJoinedArrays);
 
 // ? Iterables: arrays, strings, maps, sets, NOT Obj.
-// const str = 'Israel';
-// const letters = [...str, ' ', ...'Umaña Sedó'];
-// console.log(letters);
+const str = 'Israel';
+const letters = [...str, ' ', ...'Umaña Sedó'];
+console.log(letters);
 
 // restaurant.orderDelivery({
 //   time: '22:30',
@@ -208,32 +208,32 @@ const restaurant = {
   ? No incluye elementos saltados "skipped (, ,)"
   ? Siempre debe estar al final del structuring assignment
 */
-const [a, b, ...others] = [1, 2, 3, 4, 5];
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
 // console.log(a, b, others);
 
-const [pizza, , risotto, , bruchetta, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
+// const [pizza, , risotto, , bruchetta, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
 // console.log(pizza, risotto, bruchetta, otherFood);
 
 // ~ REST Pattern in Objects
-const { fri, ...weekdays } = restaurant.openingHours;
+// const { fri, ...weekdays } = restaurant.openingHours;
 // console.log(fri, weekdays);
 
 // ~ REST Pattern in Functions
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-  // console.log(sum);
-};
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// };
 
-add(2, 3);
-add(5, 6, 7);
-add(8, 2, 5, 3, 2, 1, 4);
+// add(2, 3);
+// add(5, 6, 7);
+// add(8, 2, 5, 3, 2, 1, 4);
 
-const x = [44, 33, 22];
-add(...x);
+// const x = [44, 33, 22];
+// add(...x);
 
 // restaurant.orderPizza('ajos', 'pollo', 'tocineta', 'cladimia');
 // restaurant.orderPizza('ajos');
@@ -250,12 +250,12 @@ add(...x);
 
 // console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
 
-restaurant.numGuests = 0;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// restaurant.numGuests = 0;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 // console.log(guests1);
 
 // -> Esto es lo mismo de arriba pero más corto
-const guests2 = restaurant.numGuests || 10;
+// const guests2 = restaurant.numGuests || 10;
 // console.log(guests2);
 
 // console.log(`<-------- AND -------->`);
@@ -273,7 +273,7 @@ const guests2 = restaurant.numGuests || 10;
 
 // console.log(`<-------- THE NULLISH COALESING OPERATOR ?? -------->`);
 // Nullish: null and undefined (NOT 0 or '')
-const guestsCorrect = restaurant.numGuests ?? 10;
+// const guestsCorrect = restaurant.numGuests ?? 10;
 // console.log(guestsCorrect);
 
 // * LOGICAL ASSIGNMENT OPERATORS
@@ -316,19 +316,19 @@ const guestsCorrect = restaurant.numGuests ?? 10;
 // Si existe openingHours, continúa al siguiente parámetro, si este existe, continua.
 
 // * Looping Objects: Object Keys, Values, and Entries
-for (const day of Object.keys(openingHours)) {
-}
+// for (const day of Object.keys(openingHours)) {
+// }
 
 // * SETS
 // ? A SET is a collection of unique values, No duplicates.
-const ordersSet = new Set([
-  'Pasta',
-  'Pizza',
-  'Pizza',
-  'Risotto',
-  'Pasta',
-  'Pizza',
-]);
+// const ordersSet = new Set([
+//   'Pasta',
+//   'Pizza',
+//   'Pizza',
+//   'Risotto',
+//   'Pasta',
+//   'Pizza',
+// ]);
 // console.log(ordersSet);
 
 // console.log(new Set('Israel'));
@@ -336,9 +336,9 @@ const ordersSet = new Set([
 // console.log(ordersSet.size);
 // console.log(ordersSet.has('Pizza'));
 // console.log(ordersSet.has('Bread'));
-ordersSet.add('Garlic Bread');
-ordersSet.add('Garlic Bread');
-ordersSet.delete('Risotto');
+// ordersSet.add('Garlic Bread');
+// ordersSet.add('Garlic Bread');
+// ordersSet.delete('Risotto');
 // ordersSet.clear();
 
 // console.log(ordersSet);
@@ -346,84 +346,84 @@ ordersSet.delete('Risotto');
 // for (const order of ordersSet) console.log(order);
 
 // Example
-const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
-const staffUnique = [...new Set(staff)];
+// const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+// const staffUnique = [...new Set(staff)];
 // console.log(staffUnique);
 
 // console.log(new Set('AndrésIsraelUmañaSedó').size);
 
 // * MAPs: Fundamentals
-const rest = new Map();
-rest.set('name', 'Classico Italiano');
+// const rest = new Map();
+// rest.set('name', 'Classico Italiano');
 // console.log(rest.set('name', 'Classico Italiano'));
-rest.set(1, 'Firenze, Italy');
+// rest.set(1, 'Firenze, Italy');
 // console.log(rest.set(2, 'Lisbon, Portugal'));
 
-rest
-  .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
-  .set('open', 11)
-  .set('close', 23)
-  .set(true, 'We are open :D')
-  .set(false, 'We are closed :(');
+// rest
+//   .set('categories', ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'])
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, 'We are open :D')
+//   .set(false, 'We are closed :(');
 
 // console.log(rest.get('name'));
 // console.log(rest.get(true));
 // console.log(rest);
 
-const time = 21;
+// const time = 21;
 // console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
 
 // console.log(rest.has('categories'));
-rest.delete(2);
+// rest.delete(2);
 // rest.clear();
 // al hacerlo una variable ([1, 2]) se crea una sola dirección en la memoria
-const arr = [1, 2];
-rest.set(arr, 'Test');
-rest.set('Heading', document.querySelector('h1'));
-const heading = rest.get('Heading');
+// const arr = [1, 2];
+// rest.set(arr, 'Test');
+// rest.set('Heading', document.querySelector('h1'));
+// const heading = rest.get('Heading');
 
-heading.style.color = 'yellow';
+// heading.style.color = 'yellow';
 
-console.log(rest);
+// console.log(rest);
 // console.log(rest.size);
 // Los arrays [1, 2] no son el mismo objeto en el HEAP
 // console.log(rest.get(arr));
 // You can use objects as MAP KEYS
 
 // * MAPS ITERATION
-const question = new Map([
-  ['question', 'What is the best programming language in the world?'],
-  [1, 'C'],
-  [2, 'Java'],
-  [3, 'JavaScript'],
-  ['correct', 3],
-  [true, 'Correct 🥳🎉🎊🍾'],
-  [false, 'Try again!'],
-]);
+// const question = new Map([
+//   ['question', 'What is the best programming language in the world?'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['correct', 3],
+//   [true, 'Correct 🥳🎉🎊🍾'],
+//   [false, 'Try again!'],
+// ]);
 
-console.log(question);
+// console.log(question);
 // Todo esto es lo mismo que decir:
 
 // CONVERT OBJECTS TO MAPS
-console.log(Object.entries(openingHours));
-const hoursMap = new Map(Object.entries(openingHours));
+// console.log(Object.entries(openingHours));
+// const hoursMap = new Map(Object.entries(openingHours));
 
-console.log(hoursMap);
+// console.log(hoursMap);
 
 // Quiz app
-console.log(question.get('question'));
-for (const [key, value] of question) {
-  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
-}
+// console.log(question.get('question'));
+// for (const [key, value] of question) {
+//   if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+// }
 
 // const answer = prompt('Your answer: ');
-const answer = 3;
-console.log(answer);
+// const answer = 3;
+// console.log(answer);
 // console.log(question.get(Number(answer) === question.get('correct')));
 // console.log(question.get(question.get('correct') === answer)); // wrong
 
 // -> Convert MAP to ARRAY
-console.log([...question]);
+// console.log([...question]);
 // console.log([...question.entries()]);
-console.log([...question.keys()]);
-console.log([...question.values()]);
+// console.log([...question.keys()]);
+// console.log([...question.values()]);
