@@ -1,3 +1,4 @@
+console.log('%c🦸🏻‍♂️ CODINGHEROES EXERCISES', 'color: #1BF691; font-size: 26px; font-weight: bold;');
 const books = [
   {
     title: 'Algorithms',
@@ -366,35 +367,50 @@ books.forEach(element => {
 
 // Use short-circuiting.
 
-const hasExamplesInJava = ({ programmingLanguage }) => {
-  console.log('Programing language:', programmingLanguage);
-  console.log(programmingLanguage === 'Java' || 'no data available');
-};
+// const hasExamplesInJava = ({ programmingLanguage }) => {
+//   console.log('Programing language:', programmingLanguage);
+//   console.log(programmingLanguage === 'Java' || 'no data available');
+// };
 
-hasExamplesInJava(books[0]);
+// hasExamplesInJava(books[0]);
 
 // 5.2 Some of the book objects have the onlineContent property, which is either true or false.
 // Loop over the books array, and for the books that provide online content, log to the console
 // a string in this format: "${title}" provides online content. Use short-circuiting.
-console.log('----- Voy aquí ------');
+// console.log('----- Voy aquí ------');
 
-// const haveOnlineContent = books => {
+// // const haveOnlineContent = books => {
+// books.forEach(book => {
+//   book.onlineContent && console.log(`${book.title} provides online content`);
+// });
+// // };
+// // haveOnlineContent(books);
+
+// console.log('----Otro Método-----');
+
+// for (let i = 0; i < books.length; i++) {
+//   const { onlineContent } = books[i];
+//   const title = books[i].title;
+//   onlineContent && console.log(`${title} provides online content`);
+// }
+
+// console.log('La respuesta:');
+// for (let i = 0; i < books.length; i++) {
+//   books[i].onlineContent &&
+//     console.log(`"${books[i].title}" provides online content`);
+// }
+
+
+
+// ////////////////////////////////////////
+// The Nullish Coalescing Operator (??) ///
+// ////////////////////////////////////////
+
+// 6.1 There are objects in the books array that don't have the 
+// onlineContent property at all. Loop over the books array, and log a 
+// string to the console in this format: "${title}" provides no data 
+// about its online content.
+
 books.forEach(book => {
-  book.onlineContent && console.log(`${book.title} provides online content`);
+  book.onlineContent ?? console.log(`${book.title} provides online content`);
 });
-// };
-// haveOnlineContent(books);
-
-console.log('----Otro Método-----');
-
-for (let i = 0; i < books.length; i++) {
-  const { onlineContent } = books[i];
-  const title = books[i].title;
-  onlineContent && console.log(`${title} provides online content`);
-}
-
-console.log('La respuesta:');
-for (let i = 0; i < books.length; i++) {
-  books[i].onlineContent &&
-    console.log(`"${books[i].title}" provides online content`);
-}

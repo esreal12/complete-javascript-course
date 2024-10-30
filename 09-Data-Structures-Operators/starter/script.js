@@ -1,6 +1,21 @@
 // * Section 9 Data Structures, Modern Operators and Strings
+('use strict');
 
-'use strict';
+console.log(
+  `%c-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶\n%c// Section 9 \n\n%c// ⏃ Data Structures, \n// Modern Operators and Strings \n%c-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶-̶`,
+  `color: orange; font-size: 12px; font-weight: bold; background:orange; padding:1px; margin-bottom:12px; border-radius:15px;`,
+  `color: #6721ff; font-size: 20px; font-weight: bold; background: white; padding: 2px; border-radius:5px;`,
+  `color: #72f71f; font-size: 18px;`,
+  `color: orange; font-size: 12px; font-weight: bold; background:orange; padding:1px; margin-top:12px; border-radius:15px`
+);
+
+// function styledLog(message, style) {
+//   console.log(`%c${message}`, style);
+// }
+// styledLog(
+//   'Mensaje con fondo azul y texto en blanco',
+//   'background: blue; color: white; padding: 4px; border-radius: 4px;'
+// );
 
 // Data needed for a later exercise
 const flights =
@@ -289,7 +304,6 @@ const restaurant = {
 // if (restaurant.orderPizza) restaurant.orderPizza('mushrooms', 'spinach');
 // Que es lo mismo que
 // restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
-
 
 // -> THE NULLISH COALESING OPERATOR ??
 // console.log(`<-------- THE NULLISH COALESING OPERATOR ?? -------->`);
