@@ -155,7 +155,7 @@
 // arguments to this function.
 // const nums = [2, 3, 4];
 // function multiply(a, b, c) {
-  // Your solution here
+// Your solution here
 //   return a * b * c;
 // }
 // console.log(multiply(...nums));
@@ -187,9 +187,8 @@
 
 // const mergedSettings = { ...defaultSettings, ...userSettings };
 
-
-// Complex Merge: Combine the two arrays and two objects below, 
-// and then pass the merged array and object properties as 
+// Complex Merge: Combine the two arrays and two objects below,
+// and then pass the merged array and object properties as
 // arguments to a function.
 
 // const nums1 = [1, 2];
@@ -207,6 +206,114 @@
 
 // display(nums3, obj3);
 
-
 // TODO
-// REST Exercises in chat gpt first to explain the topic and then some practice 
+// REST Exercises in chat gpt first to explain the topic and then some practice
+
+//! Exercises
+//+ Beginner
+// Function Arguments with Rest Operator: Create a function multiply
+// that accepts any number of arguments and returns their product
+// using the rest operator.
+
+// function multiply(...numbers) {
+//   console.log(numbers.reduce((a, b) => a * b));
+// }
+
+// multiply(2, 3); // Output: 6
+// multiply(1, 2, 3, 4); // Output: 24
+
+// Array Destructuring: Use the rest operator to extract the first two elements
+// from an array into individual variables, and gather the rest into another array.
+
+// const numbersArray = [1, 2, 3, 4, 5];
+// const [a, b, ...restNumbers] = numbersArray;
+
+// console.log(a, b, restNumbers);
+
+// Intermediate
+// Summing Function with Default Value: Create a function sumWithDefault that takes any
+// number of arguments and adds them, but if no arguments are passed, return a default
+// value (let's say 0).
+
+// function sumWithDefault(...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   console.log(sum);
+// }
+
+// sumWithDefault(5, 10); // Output: 15
+// sumWithDefault(); // Output: 0
+
+// Merge User Details: Using object destructuring with the rest operator, create a function
+// getUserDetails that extracts a user's name and email from a user object and collects the
+// remaining properties into another object.
+
+// const user = {
+//   name: 'John',
+//   email: 'john@example.com',
+//   age: 30,
+//   location: 'USA',
+// };
+
+// function getUserDetails(user) {
+//   // Your solution here
+//   const { name, email, ...otherDetails } = user;
+//   console.group('User Details');
+//   console.log(`Name: ${name}`);
+//   console.log(`Email: ${email}`);
+//   console.log('Other Details:', otherDetails);
+//   console.groupEnd(); // Finaliza el grupo
+// }
+
+// getUserDetails(user);
+// // Output:
+// // Name: John
+// // Email: john@example.com
+// // Other details: { age: 30, location: 'USA' }
+
+//+ Advanced
+// Function that Ignores Specific Arguments: Create a function ignoreFirstTwo that
+// ignores the first two arguments passed to it and returns the rest as an array.
+
+// function ignoreFirstTwo(...args) {
+//   // Your solution here
+//   const [, , ...restOfArguments] = args;
+//   console.log(restOfArguments);
+// }
+
+// // ignoreFirstTwo(1, 2, 3, 4, 5); // Output: [3, 4, 5]
+// // ignoreFirstTwo('a', 'b', 'c'); // Output: ['c']
+
+// Combine Multiple Arrays Using Rest Operator: Write a function combineArrays that
+// takes multiple arrays as arguments, combines them into one array, and removes any duplicates.
+
+// function combineArrays(...arrays) {
+//   // Your solution here
+//   const combinedArrays = [].concat(...arrays);
+//   console.log(combinedArrays);
+//   const uniqueArray = [...new Set(combinedArrays)];
+//   console.log(uniqueArray);
+// }
+
+// combineArrays([1, 2], [2, 3], [3, 4]); // Output: [1, 2, 3, 4]
+
+
+// Object Filtering with Rest Operator: Create a function filterObject that takes an object 
+// and a list of keys, and returns a new object with only the properties that were not listed 
+// in the keys. Use the rest operator for this.
+
+const user = { name: 'Alice', age: 25, email: 'alice@example.com', location: 'New York' };
+
+function filterObject(obj, ...keysToRemove) {
+  // Your solution here
+  const newObj = {...obj};
+
+    keysToRemove.forEach(key => {
+        delete newObj[key]
+    });
+
+  console.log(newObj);
+}
+
+filterObject(user, 'email', 'location');  
+// Output: { name: 'Alice', age: 25 }

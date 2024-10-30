@@ -329,32 +329,72 @@ const arrBookAuthors = [...books[0].author, ...books[1].author];
 const [mainKeyword, ...rest] = books[0].keywords;
 console.log(`Main Keyword: ${mainKeyword}, The Rest: ${rest}`);
 
-
 // 4.2 Destructure the second book from the books array into a variable called bookPublisher.
 // The bookPublisher variable should be assigned with the value of the publisher property of
 // the book object. Assign the rest of the properties to the restOfTheBook variable.
 
 const { publisher: bookPublisher, ...restOfTheBook } = books[1];
-console.log(`Book Publisher: ${bookPublisher}, The Rest: ${restOfTheBook.title}`);
+console.log(
+  `Book Publisher: ${bookPublisher}, The Rest: ${restOfTheBook.title}`
+);
 
-
-// 4.3 Write a function called printBookAuthorsCount that has two parameters called title and authors. 
-// The authors parameter should accept any number of arguments. This function should log to the console 
+// 4.3 Write a function called printBookAuthorsCount that has two parameters called title and authors.
+// The authors parameter should accept any number of arguments. This function should log to the console
 // a string formatted like that: "The book "${title}" has ${authors.length} authors".
 
 // WOW IMPRESSIVE!!! hice algo mucho más avanzado de lo que se me pedía en este ejercicio,
-// solo por entender mal!! :D 
-const printBookAuthorsCount = ({title, ...author}) => {
+// solo por entender mal!! :D
+const printBookAuthorsCount = ({ title, ...author }) => {
   const authors = author.author;
   // console.log(title, authors);
   console.log(`The book "${title}" has ${authors.length} authors`);
-}
+};
 
 books.forEach(element => {
   printBookAuthorsCount(element);
 });
 
-
 // ////////////////////////////////
 // Short Circuiting (&& and ||) ///
 // ////////////////////////////////
+
+// 5.1 Some of the book objects have the programmingLanguage property, which specifies what
+// programming language is used in the book, for example.
+// Write a function called hasExamplesInJava that takes a book object from the books array as
+// an argument. This function should return true if the book uses Java, or a string 'no data
+// available' if it uses other language or no programming language at all.
+
+// Use short-circuiting.
+
+const hasExamplesInJava = ({ programmingLanguage }) => {
+  console.log('Programing language:', programmingLanguage);
+  console.log(programmingLanguage === 'Java' || 'no data available');
+};
+
+hasExamplesInJava(books[0]);
+
+// 5.2 Some of the book objects have the onlineContent property, which is either true or false.
+// Loop over the books array, and for the books that provide online content, log to the console
+// a string in this format: "${title}" provides online content. Use short-circuiting.
+console.log('----- Voy aquí ------');
+
+// const haveOnlineContent = books => {
+books.forEach(book => {
+  book.onlineContent && console.log(`${book.title} provides online content`);
+});
+// };
+// haveOnlineContent(books);
+
+console.log('----Otro Método-----');
+
+for (let i = 0; i < books.length; i++) {
+  const { onlineContent } = books[i];
+  const title = books[i].title;
+  onlineContent && console.log(`${title} provides online content`);
+}
+
+console.log('La respuesta:');
+for (let i = 0; i < books.length; i++) {
+  books[i].onlineContent &&
+    console.log(`"${books[i].title}" provides online content`);
+}

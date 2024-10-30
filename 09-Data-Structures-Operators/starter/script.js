@@ -261,47 +261,50 @@ const restaurant = {
 // ? Use ANY data type, return ANY data type,
 // ? short-circuiting
 
-console.log(`<-------- OR -------->`);
-console.log(3 || 'Israel'); // 3
-console.log('' || 'Israel'); // Israel
-console.log(true || 0); // true
-console.log(undefined || null); // null
+// console.log(`<-------- OR -------->`);
+// console.log(3 || 'Israel'); // 3
+// console.log('' || 'Israel'); // Israel
+// console.log(true || 0); // true
+// console.log(undefined || null); // null
 
-console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
 
-restaurant.numGuests = 20;
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-console.log(guests1);
+// restaurant.numGuests = 20;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guests1);
 
 // -> Esto es lo mismo de arriba pero más corto
-const guests2 = restaurant.numGuests || 10;
-console.log(guests2);
+// const guests2 = restaurant.numGuests || 10;
+// console.log(guests2);
 
 // console.log(`<-------- AND -------->`);
 // console.log(0 && 'Israel');
 // console.log(7 && 'Israel');
 
 // -> Practical example
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'spinach');
-}
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('mushrooms', 'spinach');
+// }
 // Es lo mismo que
 // if (restaurant.orderPizza) restaurant.orderPizza('mushrooms', 'spinach');
 // Que es lo mismo que
 // restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
+
+// -> THE NULLISH COALESING OPERATOR ??
 // console.log(`<-------- THE NULLISH COALESING OPERATOR ?? -------->`);
 // Nullish: null and undefined (NOT 0 or '')
 // const guestsCorrect = restaurant.numGuests ?? 10;
 // console.log(guestsCorrect);
 
 // * LOGICAL ASSIGNMENT OPERATORS
-// console.log(`<------- OR Assignment Operator ||= -------->`);
-// const rest1 = {
-//   name: 'Capri',
-//   // numGuests: 20,
-//   numGuests: 0,
-// };
+// -> OR Assignment Operator ||=
+console.log(`<------- OR Assignment Operator ||= -------->`);
+const rest1 = {
+  name: 'Capri',
+  // numGuests: 20,
+  numGuests: 0,
+};
 
 // const rest2 = {
 //   name: 'La Piazza',
