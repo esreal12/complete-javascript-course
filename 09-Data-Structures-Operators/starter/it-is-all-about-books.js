@@ -292,8 +292,69 @@ const printBookInfo = ({ title, author, year = 'Unknown' }) => {
 
 // printBookInfo(books[0]);
 
-
 // /////////////////////////
 // The SPREAD Operator ///
 // /////////////////////////
-const arr = []
+
+// 3.1 Each book object has the author property, which stores an array of strings
+// (author names) if there are multiple authors, or a single string (author name)
+// if there is just one author.
+
+// Declare an array called bookAuthors, and fill it with authors of the first two
+// books from the books array. The bookAuthors array should have just one level
+// (no nested arrays).
+
+const arrBookAuthors = [...books[0].author, ...books[1].author];
+// console.log(arrBookAuthors);
+
+// 3.2 Write a function called spellWord that accepts a single string as an argument.
+//This function should log to the console each letter of the argument separated by
+// a space.
+
+// const spellWord = arr => {
+//   let h = [...arr];
+//   console.trace(`Array: [ ${h} ] \n Size: (${h.length})`);
+// };
+// spellWord('Javascript');
+
+// ///////////////////////////////
+// Rest Pattern and Parameters ///
+// ///////////////////////////////
+
+// 4.1 Destructure the keywords property (array) of the first book from the books array
+// into variables called mainKeyword and rest. The first keyword should be assigned
+// to mainKeyword, and the rest of the keywords should be assigned to the rest variable
+// (it should be an array).
+
+const [mainKeyword, ...rest] = books[0].keywords;
+console.log(`Main Keyword: ${mainKeyword}, The Rest: ${rest}`);
+
+
+// 4.2 Destructure the second book from the books array into a variable called bookPublisher.
+// The bookPublisher variable should be assigned with the value of the publisher property of
+// the book object. Assign the rest of the properties to the restOfTheBook variable.
+
+const { publisher: bookPublisher, ...restOfTheBook } = books[1];
+console.log(`Book Publisher: ${bookPublisher}, The Rest: ${restOfTheBook.title}`);
+
+
+// 4.3 Write a function called printBookAuthorsCount that has two parameters called title and authors. 
+// The authors parameter should accept any number of arguments. This function should log to the console 
+// a string formatted like that: "The book "${title}" has ${authors.length} authors".
+
+// WOW IMPRESSIVE!!! hice algo mucho más avanzado de lo que se me pedía en este ejercicio,
+// solo por entender mal!! :D 
+const printBookAuthorsCount = ({title, ...author}) => {
+  const authors = author.author;
+  // console.log(title, authors);
+  console.log(`The book "${title}" has ${authors.length} authors`);
+}
+
+books.forEach(element => {
+  printBookAuthorsCount(element);
+});
+
+
+// ////////////////////////////////
+// Short Circuiting (&& and ||) ///
+// ////////////////////////////////

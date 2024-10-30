@@ -169,9 +169,9 @@ const restaurant = {
 // console.log(newJoinedArrays);
 
 // ? Iterables: arrays, strings, maps, sets, NOT Obj.
-const str = 'Israel';
-const letters = [...str, ' ', ...'Umaña Sedó'];
-console.log(letters);
+// const str = 'Israel';
+// const letters = [...str, ' ', ...'Umaña Sedó'];
+// console.log(letters);
 
 // restaurant.orderDelivery({
 //   time: '22:30',
@@ -196,7 +196,7 @@ console.log(letters);
 // restaurantCopy.name = 'Ristorante Roma';
 // console.log(restaurantCopy);
 
-// * REST PATTERN & PARAMETERS //////////////////
+// *  REST PATTERN & PARAMETERS //////////////////
 
 // -> This is SPREAD because the ... is on the right side of the evaluation.
 // const arr = [1, 2, ...[3, 4]];
@@ -222,13 +222,32 @@ console.log(letters);
 // console.log(fri, weekdays);
 
 // ~ REST Pattern in Functions
+
+// const test = (...numbers) => {
+//   console.log(numbers);
+// };
+
+// test([5, 4, 3, 2, 2], [2,3]);
+// test(2, 3, 4, 5);
+
 // const add = function (...numbers) {
 //   let sum = 0;
 //   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
 //   console.log(sum);
 // };
 
-// add(2, 3);
+// add(
+//   Number('Andrés'.length),
+//   Number('Israel'.length),
+//   Number('Umaña'.length),
+//   Number('Sedó'.length)
+// );
+// add(
+//   Number('Emilia'.length),
+//   Number('María'.length),
+//   Number('Vargas'.length),
+//   Number('Zúñiga'.length)
+// );
 // add(5, 6, 7);
 // add(8, 2, 5, 3, 2, 1, 4);
 
@@ -242,30 +261,30 @@ console.log(letters);
 // ? Use ANY data type, return ANY data type,
 // ? short-circuiting
 
-// console.log(`<-------- OR -------->`);
-// console.log(3 || 'Israel'); // 3
-// console.log('' || 'Israel'); // Israel
-// console.log(true || 0); //
-// console.log(undefined || null);
+console.log(`<-------- OR -------->`);
+console.log(3 || 'Israel'); // 3
+console.log('' || 'Israel'); // Israel
+console.log(true || 0); // true
+console.log(undefined || null); // null
 
-// console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); // 'Hello'
 
-// restaurant.numGuests = 0;
-// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
-// console.log(guests1);
+restaurant.numGuests = 20;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1);
 
 // -> Esto es lo mismo de arriba pero más corto
-// const guests2 = restaurant.numGuests || 10;
-// console.log(guests2);
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2);
 
 // console.log(`<-------- AND -------->`);
 // console.log(0 && 'Israel');
 // console.log(7 && 'Israel');
 
 // -> Practical example
-// if (restaurant.orderPizza) {
-//   restaurant.orderPizza('mushrooms', 'spinach');
-// }
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
 // Es lo mismo que
 // if (restaurant.orderPizza) restaurant.orderPizza('mushrooms', 'spinach');
 // Que es lo mismo que
