@@ -229,24 +229,24 @@ const books = [
 // ////////////////////////
 
 // 1.1 Destructure the books array into two variables called firstBook and secondBook.
-const [firstBook, secondBook] = books;
+// const [firstBook, secondBook] = books;
 
 // 1.2 Destructure the books array into a variable called thirdBook. You must skip the first two books.
-const [, , thirdBook] = books;
+// const [, , thirdBook] = books;
 
 // 1.3 Below is the nested ratings array that contains two other arrays. Destructure the nested ratings arrays
 // into two variables called rating and ratingsCount. In the result of your destructuring, the ratings variable
 // should store a number 4.19, and the ratingsCount variable should store a number 144584.
-const ratings = [
-  ['rating', 4.19],
-  ['ratingsCount', 144584],
-];
+// const ratings = [
+//   ['rating', 4.19],
+//   ['ratingsCount', 144584],
+// ];
 // const [[, rating], [, ratingcount]] = ratings;
 
 // 1.4 Below is the ratingStars array. Destructure it into three variables called fiveStarRatings, oneStarRatings and threeStarRatings.
 // Assign the threeStarRatings variable with a default value of 0.
-const ratingStars = [63405, 1808];
-const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
+// const ratingStars = [63405, 1808];
+// const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
 // console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
 
 // /////////////////////////
@@ -259,37 +259,37 @@ const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
 
 // 2.2 Each book object has the keywords property. Destructure the first book object from the books array into a variable called tags.
 // The tags variable should be assigned with the value of the keywords property.
-const { keywords: tags } = books[0];
+// const { keywords: tags } = books[0];
 // console.log(tags);
 
 // 2.3 The seventh book from the books array is missing the programmingLanguage property. Destructure the seventh book object (books[6])
 // into variables called language and programmingLanguage. Assign the programmingLanguage variable with a default value of 'unknown'.
-const { language, programmingLanguage = 'unkown' } = books[6];
+// const { language, programmingLanguage = 'unkown' } = books[6];
 // console.log(language, programmingLanguage);
 
 // 2.4 Below are two variables called bookTitle and bookAuthor. Reassign them with the values of the title and author properties of the
 // first book object from the books array.
-let bookTitle = 'unknown';
-let bookAuthor = 'unknown';
+// let bookTitle = 'unknown';
+// let bookAuthor = 'unknown';
 
-({ title: bookTitle, author: bookAuthor } = books[0]);
+// ({ title: bookTitle, author: bookAuthor } = books[0]);
 // console.log(bookTitle, bookAuthor);
 
 // 2.5 Each book object has a deeply nested rating property as illustrated below:
-const {
-  thirdParty: {
-    goodreads: { rating },
-  },
-} = books[0];
+// const {
+//   thirdParty: {
+//     goodreads: { rating },
+//   },
+// } = books[0];
 // console.log(rating);
 
 //2.6 Write a function called printBookInfo that has three parameters called title, author and year.
 // This function should work for a single object passed as an argument, and it should log to the console
 // information about the book in this format: "${title} by ${author}, ${year}".
 
-const printBookInfo = ({ title, author, year = 'Unknown' }) => {
-  console.log(`${title} by ${author}, ${year}`);
-};
+// const printBookInfo = ({ title, author, year = 'Unknown' }) => {
+//   console.log(`${title} by ${author}, ${year}`);
+// };
 
 // printBookInfo(books[0]);
 
@@ -305,7 +305,7 @@ const printBookInfo = ({ title, author, year = 'Unknown' }) => {
 // books from the books array. The bookAuthors array should have just one level
 // (no nested arrays).
 
-const arrBookAuthors = [...books[0].author, ...books[1].author];
+// const arrBookAuthors = [...books[0].author, ...books[1].author];
 // console.log(arrBookAuthors);
 
 // 3.2 Write a function called spellWord that accepts a single string as an argument.
@@ -327,17 +327,17 @@ const arrBookAuthors = [...books[0].author, ...books[1].author];
 // to mainKeyword, and the rest of the keywords should be assigned to the rest variable
 // (it should be an array).
 
-const [mainKeyword, ...rest] = books[0].keywords;
-console.log(`Main Keyword: ${mainKeyword}, The Rest: ${rest}`);
+// const [mainKeyword, ...rest] = books[0].keywords;
+// console.log(`Main Keyword: ${mainKeyword}, The Rest: ${rest}`);
 
 // 4.2 Destructure the second book from the books array into a variable called bookPublisher.
 // The bookPublisher variable should be assigned with the value of the publisher property of
 // the book object. Assign the rest of the properties to the restOfTheBook variable.
 
-const { publisher: bookPublisher, ...restOfTheBook } = books[1];
-console.log(
-  `Book Publisher: ${bookPublisher}, The Rest: ${restOfTheBook.title}`
-);
+// const { publisher: bookPublisher, ...restOfTheBook } = books[1];
+// console.log(
+//   `Book Publisher: ${bookPublisher}, The Rest: ${restOfTheBook.title}`
+// );
 
 // 4.3 Write a function called printBookAuthorsCount that has two parameters called title and authors.
 // The authors parameter should accept any number of arguments. This function should log to the console
@@ -345,15 +345,15 @@ console.log(
 
 // WOW IMPRESSIVE!!! hice algo mucho más avanzado de lo que se me pedía en este ejercicio,
 // solo por entender mal!! :D
-const printBookAuthorsCount = ({ title, ...author }) => {
-  const authors = author.author;
-  // console.log(title, authors);
-  console.log(`The book "${title}" has ${authors.length} authors`);
-};
+// const printBookAuthorsCount = ({ title, ...author }) => {
+//   const authors = author.author;
+//   // console.log(title, authors);
+//   console.log(`The book "${title}" has ${authors.length} authors`);
+// };
 
-books.forEach(element => {
-  printBookAuthorsCount(element);
-});
+// books.forEach(element => {
+//   printBookAuthorsCount(element);
+// });
 
 // ////////////////////////////////
 // Short Circuiting (&& and ||) ///
@@ -411,6 +411,11 @@ books.forEach(element => {
 // string to the console in this format: "${title}" provides no data 
 // about its online content.
 
-books.forEach(book => {
-  book.onlineContent ?? console.log(`${book.title} provides online content`);
-});
+// Solo hay dos true
+// hay uno que no tiene la propiedad
+// Si uso OR aparecen todos
+// Si uso AND aparecen dos
+// Si uso Nullish aparecen 3
+// books.forEach(book => {
+//   book.onlineContent ?? console.log(`${book.title} %cProvides no data about online content`, 'color:yellow;');
+// });

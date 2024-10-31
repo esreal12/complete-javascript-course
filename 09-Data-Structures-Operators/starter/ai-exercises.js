@@ -1,10 +1,14 @@
-console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight: bold;');
+console.log(
+  '%c🤖 AI EXERCISES',
+  'color: #9AD819; font-size: 26px; font-weight: bold;'
+);
 ////////////////////////////
 // Ejercicios Extra: ///////
 ////////////////////////////
-// // // // // // // // ///
-// Destructuring Arrays ///
-// // // // // // // // ///
+
+/// // // // // // // // ///
+//! Destructuring Arrays ///
+/// // // // // // // // ///
 
 //-> Intercambiar Variables
 // let g = 1;
@@ -35,8 +39,8 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // console.log(c); // 5
 
 // // // // // // // // / ///
-// Destructuring Objects ///
-// // // // // // // // ///
+//! Destructuring Objects ///
+//// // // // // // // // ///
 
 //-> Asignar a Nuevos Nombres de Variables
 // const person = {
@@ -96,11 +100,11 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 
 // displayPerson(person);
 
-/// // // // // // // // // // // ///
-//  THE SPREAD OPERATOR EXERCISES ///
-/// // // // // // // // // // // ///
+/// // // // // // // // // // // ////
+//!  THE SPREAD OPERATOR EXERCISES ///
+/// // // // // // // // // // // ////
 //+ Beginner
-//-> Array Combination: 
+//-> Array Combination:
 //? Use the spread operator to combine these two arrays into one.
 
 // const colors1 = ['red', 'green'];
@@ -109,7 +113,7 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // const allColors = [...colors1, ...colors2];
 // console.log(allColors);
 
-//-> Clone an Object: 
+//-> Clone an Object:
 //? Clone the user object below without directly modifying it.
 
 // const user = { name: 'Alice', age: 25 };
@@ -118,8 +122,8 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // userClone.name = 'Israel';
 // console.log(userClone);
 
-//-> Add Property to Object: 
-//? Add a location property to the user object while keeping the original 
+//-> Add Property to Object:
+//? Add a location property to the user object while keeping the original
 //? properties intact.
 
 // const user2 = { name: 'Bob', age: 30 };
@@ -129,7 +133,7 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // console.log(user2Clone);
 
 //+ Intermediate
-//-> Merge Multiple Arrays: 
+//-> Merge Multiple Arrays:
 //? Merge the three arrays into a new array.
 
 // const fruits = ['apple', 'banana'];
@@ -139,8 +143,8 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // const food = [...fruits, ...vegetables, ...grains];
 // console.log(food);
 
-//-> Merge and Update Object: 
-//? Using the spread operator, create a userInfo object with the 
+//-> Merge and Update Object:
+//? Using the spread operator, create a userInfo object with the
 //? properties of user and extraInfo, but update the age property to 30.
 
 // const user3 = { name: 'Chris', age: 20 };
@@ -157,7 +161,7 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 
 // console.log(userInfo);
 
-//-> Function Arguments: 
+//-> Function Arguments:
 //? Write a function that takes any number of
 //? arguments and returns the product of all arguments.
 //? Use the spread operator to pass elements of an array as
@@ -171,7 +175,7 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // console.log(multiply(...nums));
 
 //+ Advanced
-//-> Deep Clone an Object: 
+//-> Deep Clone an Object:
 //? Clone the nested object below without
 // modifying the original. Avoid using any external libraries.
 // const nestedObject = {
@@ -188,9 +192,9 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // console.log(nestedObject);
 // console.log(nestedOjectCopy);
 
-//-> Conditional Spread: 
-//? Using spread syntax, merge the defaultSettings and 
-//? userSettings objects, but only include properties from 
+//-> Conditional Spread:
+//? Using spread syntax, merge the defaultSettings and
+//? userSettings objects, but only include properties from
 //? userSettings that have non-null values.
 
 // const defaultSettings = { theme: 'dark', notifications: true };
@@ -198,8 +202,8 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // Your solution here
 // const mergedSettings = { ...defaultSettings, ...userSettings };
 
-//-> Complex Merge: 
-//? Combine the two arrays and two objects below, and then pass the 
+//-> Complex Merge:
+//? Combine the two arrays and two objects below, and then pass the
 //? merged array and object properties as arguments to a function.
 
 // const nums1 = [1, 2];
@@ -218,15 +222,14 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 
 // display(nums3, obj3);
 
-
-/// // // // // // // // // // // ///
-//  THE REST OPERATOR EXERCISES  ////
-/// // // // // // // // // // // ///
+/// // // // // // // // // // // ////
+//!  THE REST OPERATOR EXERCISES  ////
+/// // // // // // // // // // // ////
 
 //! Exercises
 //+ Beginner
-//-> Function Arguments with Rest Operator: 
-//? Create a function multiply that accepts any number of arguments and 
+//-> Function Arguments with Rest Operator:
+//? Create a function multiply that accepts any number of arguments and
 //? returns their product using the rest operator.
 
 // function multiply(...numbers) {
@@ -236,9 +239,9 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // multiply(2, 3); // Output: 6
 // multiply(1, 2, 3, 4); // Output: 24
 
-//-> Array Destructuring: 
+//-> Array Destructuring:
 // Use the rest operator to extract the first two elements
-// from an array into individual variables, and gather the 
+// from an array into individual variables, and gather the
 // rest into another array.
 
 // const numbersArray = [1, 2, 3, 4, 5];
@@ -247,8 +250,8 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // console.log(a, b, restNumbers);
 
 //+ Intermediate
-//-> Summing Function with Default Value: 
-//? Create a function sumWithDefault that takes any number of arguments 
+//-> Summing Function with Default Value:
+//? Create a function sumWithDefault that takes any number of arguments
 //? and adds them, but if no arguments are passed, return a default
 //? value (let's say 0).
 
@@ -261,9 +264,9 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // sumWithDefault(5, 10); // Output: 15
 // sumWithDefault(); // Output: 0
 
-//-> Merge User Details: 
+//-> Merge User Details:
 //? Using object destructuring with the rest operator, create a function
-//? getUserDetails that extracts a user's name and email from a user 
+//? getUserDetails that extracts a user's name and email from a user
 //? object and collects the remaining properties into another object.
 
 // const user = {
@@ -290,8 +293,8 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // // Other details: { age: 30, location: 'USA' }
 
 //+ Advanced
-//-> Function that Ignores Specific Arguments: 
-//? Create a function ignoreFirstTwo that ignores the first two 
+//-> Function that Ignores Specific Arguments:
+//? Create a function ignoreFirstTwo that ignores the first two
 //? arguments passed to it and returns the rest as an array.
 
 // function ignoreFirstTwo(...args) {
@@ -303,8 +306,8 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 // // ignoreFirstTwo(1, 2, 3, 4, 5); // Output: [3, 4, 5]
 // // ignoreFirstTwo('a', 'b', 'c'); // Output: ['c']
 
-//-> Combine Multiple Arrays Using Rest Operator: 
-//? Write a function combineArrays that takes multiple arrays as arguments, 
+//-> Combine Multiple Arrays Using Rest Operator:
+//? Write a function combineArrays that takes multiple arrays as arguments,
 //? combines them into one array, and removes any duplicates.
 
 // function combineArrays(...arrays) {
@@ -317,10 +320,9 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 
 // combineArrays([1, 2], [2, 3], [3, 4]); // Output: [1, 2, 3, 4]
 
-
-//-> Object Filtering with Rest Operator: 
-//? Create a function filterObject that takes an object and a list of keys, 
-//? and returns a new object with only the properties that were not listed 
+//-> Object Filtering with Rest Operator:
+//? Create a function filterObject that takes an object and a list of keys,
+//? and returns a new object with only the properties that were not listed
 //? in the keys. Use the rest operator for this.
 
 // const user = { name: 'Alice', age: 25, email: 'alice@example.com', location: 'New York' };
@@ -336,10 +338,63 @@ console.log('%c🤖 AI EXERCISES', 'color: #9AD819; font-size: 26px; font-weight
 //   console.log(newObj);
 // }
 
-// filterObject(user, 'email', 'location');  
+// filterObject(user, 'email', 'location');
 // // Output: { name: 'Alice', age: 25 }
 
+//// // // // // // // // // // // ////
+//!  THE REST OPERATOR EXERCISES  /////
+//// // // // // // // // // // // ////
+//+ Beginner
+//-> Default Greeting:
+//? Use || to assign "Hello, visitor" to message if name is null or undefined.
 
-/// // // // // // // // // // // ///
-//  THE REST OPERATOR EXERCISES  ////
-/// // // // // // // // // // // ///
+// const name = null;
+// const message = `${name || 'visitor'}`;
+// console.log('Hello', message);
+
+//-> Access Granted:
+//? Use && to display "Access granted" only if both isLoggedIn and isVerified are true.
+// const isLoggedIn = true;
+// const isVerified = true;
+
+// const access = isLoggedIn && isVerified && 'Access granted';
+// console.log(access || 'Access is not granted');
+
+//+ Intermediate
+//-> Connection Status:
+//? Use || to assign "offline" to status if connection is null,
+//? undefined, or any other falsy value.
+
+// const connection = true;
+// const status = connection || 'Offline';
+// console.log(status && 'Online');
+
+//-> Optional Message Display: 
+//? Use && to assign a value to message only if showMessage is true.
+// const showMessage = true;
+// const message = showMessage && 'El mensaje es verdadero';
+// console.log(message || 'El mensaje es falso');
+
+//+ Advanced Level
+//-> Set Default Values in an Object: 
+//? Use || to assign default values to preferences. 
+//? If any value is missing, assign a default value.
+// const preferences = { theme: null, notifications: undefined };
+
+// const theme = preferences.theme || 'Dakota';
+// const notifications = preferences.notifications || 5;
+
+// console.log(theme, notifications);
+
+//-> Conditional Function Execution: 
+//? Call the sendMessage function only if both message and recipient are defined (not falsy).
+// const message = "Hello";
+// const recipient = "Friend";
+
+// function sendMessage() {
+//   console.log("Message sent to " + recipient);
+// }
+// console.log(Boolean(message), Boolean(recipient));
+
+// message && recipient && sendMessage();
+// Qué bueno esto!!!
